@@ -179,7 +179,14 @@ class Pathfinder:
 
 
 def main():
-	p = Pathfinder(900, 900, 30, False)
+	# enable diagonal paths
+	diagonal_input = input("Do you want to use diagonal paths (y/n): ")
+	diagonal = False
+	if diagonal_input == 'y':
+		diagonal = True
+	
+	# start the visualization
+	p = Pathfinder(800, 800, 20, diagonal)
 	p.startPathfinding()
 
 
